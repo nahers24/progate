@@ -26,6 +26,9 @@ body {
     width: 100%;
     height: 100vh;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .teams::before {
@@ -125,6 +128,7 @@ body {
     .teams {
         height: 100%;
         color: black;
+        display: block;
     }
 
     .teams::before {
@@ -139,6 +143,20 @@ body {
         width: 100%;
         margin-bottom: 20px;
         color: white;
+        position: relative;
+    }
+
+    .teams .team::before {
+        content: '';
+        width: 96%;
+        height: 100%;
+        position: absolute;
+        background-image: url('./images/bg-team-2.jpg');
+        z-index: -1;
+        left: 0;
+        overflow: hidden;
+        margin-left: 18px;
+        background-position: center;
     }
 
     .teams .team-list {
@@ -146,12 +164,13 @@ body {
     }
 
     .orange {
-        background-color: orangered;
+        background-color: rgba(255, 68, 0, 0.548);
     }
 
     .red {
-        background-color: darkred;
+        background-color: rgba(139, 0, 0, 0.527);
     }
+
 
 }
 
@@ -163,6 +182,7 @@ body {
     .teams {
         height: 100%;
         color: black;
+        display: block;
     }
 
     .teams::before {
@@ -182,14 +202,57 @@ body {
         margin-bottom: 20px;
         color: white;
         float: left;
+        position: relative;
+    }
+
+    .teams .team::before {
+        content: '';
+        width: 95%;
+        height: 100%;
+        position: absolute;
+        background-image: url('./images/bg-team-2.jpg');
+        z-index: -1;
+        left: 0;
+        overflow: hidden;
+        margin-left: 17px;
+        background-position: center;
     }
 
     .orange {
-        background-color: orangered;
+        background-color: rgba(255, 68, 0, 0.548);
     }
 
     .red {
-        background-color: darkred;
+        background-color: rgba(139, 0, 0, 0.527);
     }
 
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+    .container {
+        padding: 50px;
+    }
+
+    .teams {
+        height: 100%;
+        color: #fff;
+        display: block;
+    }
+
+    .teams::before {
+        content: "";
+        background-image: url('./images/bg-team-2.jpg');
+        position: absolute;
+        width: 100%;
+        height: 130vh;
+        background-attachment: fixed;
+        background-size: cover;
+        filter: sepia();
+        z-index: -1;
+    }
+
+    .teams .team {
+        width: 33.3333%;
+        margin-bottom: 30px;
+    }
 }
